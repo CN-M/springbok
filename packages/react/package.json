@@ -1,19 +1,36 @@
 {
-	"name": "react",
-	"version": "1.0.0",
-	"description": "",
-	"main": "index.js",
+	"name": "@cn-m/springbok-react",
+	"version": "0.0.1",
+	"description": "React bindings for @springbok/core",
+	"main": "dist/index.js",
+	"module": "dist/index.esm.js",
+	"types": "dist/index.d.ts",
+	"files": [
+		"dist"
+	],
 	"scripts": {
-		"test": "echo \"Error: no test specified\" && exit 1"
+		"build": "tsc --project tsconfig.json",
+		"prepublishOnly": "npm run build"
 	},
-	"keywords": [],
-	"author": "",
-	"license": "ISC",
-	"devDependencies": {
-		"tsdown": "^0.15.4",
-		"typescript": "^5.9.2"
+	"peerDependencies": {
+		"react": ">=19"
 	},
 	"dependencies": {
-		"react": "^19.1.1"
+		"@cn-m/springbok-core": "0.0.2"
+	},
+	"keywords": [
+		"state",
+		"store",
+		"zustand",
+		"springbok",
+		"react"
+	],
+	"author": "CN-M",
+	"license": "MIT",
+	"publishConfig": {
+		"access": "public"
+	},
+	"devDependencies": {
+		"@types/react": "^19.1.13"
 	}
 }

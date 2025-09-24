@@ -1,15 +1,26 @@
 {
-	"name": "@springbok/core",
-	"version": "1.0.0",
-	"description": "",
-	"main": "index.js",
-	"exports": {
-		".": "./index.ts"
-	},
+	"name": "@cn-m/springbok-core",
+	"version": "0.0.2",
+	"description": "Minimal Zustand-inspired state management library (core)",
+	"main": "dist/index.js",
+	"module": "dist/index.esm.js",
+	"types": "dist/index.d.ts",
+	"files": [
+		"dist"
+	],
 	"scripts": {
-		"test": "echo \"Error: no test specified\" && exit 1"
+		"build": "tsc --project tsconfig.json",
+		"prepublishOnly": "pnpm run build"
 	},
-	"keywords": [],
-	"author": "",
-	"license": "ISC"
+	"keywords": [
+		"state",
+		"store",
+		"zustand",
+		"springbok"
+	],
+	"author": "CN-M",
+	"license": "MIT",
+	"publishConfig": {
+		"access": "public"
+	}
 }
