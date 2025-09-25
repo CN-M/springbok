@@ -3,6 +3,7 @@ import { createRoot } from "react-dom/client";
 import "./index.css";
 import App from "./App.tsx";
 
+// biome-ignore lint/style/noNonNullAssertion: <This is default Vite behaviour. Don't worry about it>
 createRoot(document.getElementById("root")!).render(
 	<StrictMode>
 		<App />
